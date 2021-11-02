@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.webview">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--    usesCleartextTraffic="true" 明文传输设置为 true  http-->
+    <application android:usesCleartextTraffic="true">
+        <activity
+            android:name=".WebViewActivity"
+            android:process=":webviewprocess"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <service android:name=".mainprocess.MainProcessCommandService" />
+    </application>
+</manifest>
